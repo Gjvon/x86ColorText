@@ -4,8 +4,8 @@
 INCLUDE Irvine32.inc
 
 .data
-count DWORD 0
-str1 BYTE "C",0dh,0ah,0
+
+str1 BYTE "Lonestar College",0dh,0ah,0					;string that will display in color
 
 .code
 main PROC
@@ -13,8 +13,8 @@ main PROC
 	mov ecx, 16
 	mov edx, str1
 	L1:
-	call setColor
-	call	WriteString
+	call setColor										;call a library process to set the color
+	call	WriteString									; call writeString process
 	L2:
 
 	Loop L1
